@@ -1,16 +1,15 @@
 public class Tower_of_Hanoi{
-    public static void Hanoi(int n, String srs, String dest, String helper){
+    public static void Tower(int n, String src, String helper, String dest){
         if(n==1){
-            System.out.println("Transferred disk no. "+n+" from "+src+" to "+dest);
-            return;
+            System.out.println("Transferred disk from "+src+ " to "+dest);
         }
-        Hanoi(n-1,src,helper,dest);
-        System.out.println("Transferred disk no. "+n+" from "+src+" to "+dest);
-        Hanoi(n-1, helper, src, helper);
+        Tower(n-1, src, dest, helper);
+        System.out.println("Trasnfer disk "+n +" from "+src+" to "+dest);
+        Tower(n-1, helper, src, dest);
     }
     public static void main(String[] args) {
-        int n=1;
-        Hanoi(n,"S","H","H");
-        
+        int n = 3;
+        Tower(n,"S","H","D");
+
     }
 }
