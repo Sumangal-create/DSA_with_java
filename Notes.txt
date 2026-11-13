@@ -1,0 +1,2 @@
+Iteration: Block of code using a loop(while, for) that ends with a condition.
+Recursion: Block of code where function calls itself until it reaches the base case. 
